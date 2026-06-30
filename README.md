@@ -2,6 +2,8 @@
 
 A fully responsive, multi-page static website built for **BNI Services**, a financial advisory firm based in Vadodara, Gujarat. The site covers their core offerings — Mutual Fund investments, Life Insurance, and General Insurance — and is designed to build trust with prospective clients through clean visuals, clear copy, and easy navigation.
 
+![BNI Services Preview](assets/preview.png)
+
 ---
 
 ## Live Preview
@@ -46,6 +48,8 @@ bni-services/
 ├── general-insurance.html  # General Insurance service page
 ├── life-insurance.html     # Life Insurance service page
 ├── contact.html            # Contact page
+├── assets/
+│   └── preview.png         # README preview screenshot
 ├── css/
 │   └── style.css           # All styles — variables, layout, components, utilities
 └── js/
@@ -105,23 +109,6 @@ Tested and working on:
 - Microsoft Edge 120+
 - Firefox 121+
 - Safari 17+
-
----
-
-## What I Learned / Notes
-
-- Managing a consistent design system across 6 separate HTML files without a templating engine or component framework means being disciplined with CSS variables and keeping shared sections (navbar, footer) in sync manually.
-- Vanilla scroll-reveal with `IntersectionObserver` is surprisingly smooth and avoids the overhead of libraries like AOS.
-- Getting the sticky navbar to feel right (shadow, size transition, timing) took several iterations — the key is transitioning `padding` and `box-shadow` together with the same duration.
-- The page loader needs a `min-display` timeout even when assets are already cached, otherwise it flashes too quickly and looks broken.
-
----
-
-## Author
-
-**Animesh Sharma**  
-Frontend Developer  
-📧 aa1281887@gmail.com
 
 ---
 
