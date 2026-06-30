@@ -110,8 +110,3 @@ Tested and working on:
 - Firefox 121+
 - Safari 17+
 
----
-
-## License
-
-This project was built for BNI Services, Vadodara. All rights reserved.
