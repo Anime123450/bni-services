@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Work as a Freelance Financial Advisor with BNI Services. Earn from Mutual Funds, Insurance and more — on your own schedule, with full BNI support." />
+  <title>Freelance Advisor – BNI Services</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .freelance-hero { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); }
+    .role-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .role-card { background: var(--white); border-radius: var(--radius-lg); padding: 1.75rem; border: 1px solid var(--border); text-align: center; transition: var(--transition); }
+    .role-card:hover { border-color: var(--primary); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .role-card .role-icon { width: 60px; height: 60px; border-radius: 18px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; }
+    .role-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+    .role-card p { font-size: 0.88rem; }
+    .role-card .earn-tag { margin-top: 1rem; display: inline-block; background: rgba(124,58,237,0.1); color: var(--primary); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+    .perk-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .perk-item { display: flex; gap: 0.9rem; align-items: flex-start; padding: 1.1rem; background: var(--white); border-radius: var(--radius); border: 1px solid var(--border); }
+    .perk-icon { width: 38px; height: 38px; border-radius: 10px; background: rgba(124,58,237,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .perk-icon svg { width: 18px; height: 18px; color: var(--primary); }
+    .perk-item h4 { font-size: 0.9rem; margin-bottom: 0.2rem; }
+    .perk-item p { font-size: 0.82rem; }
+    .earn-breakdown { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+    .earn-item { background: var(--white); border-radius: var(--radius-lg); padding: 1.5rem; border: 1px solid var(--border); text-align: center; }
+    .earn-item .amount { font-size: 1.75rem; font-weight: 800; font-family: var(--font-heading); color: var(--primary); }
+    .earn-item .label { font-size: 0.82rem; color: var(--gray); margin-top: 0.25rem; }
+    .earn-item .type { font-size: 0.78rem; font-weight: 600; color: var(--success); margin-top: 0.4rem; }
+    .process-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; }
+    .process-step { text-align: center; }
+    .process-step .p-icon { width: 60px; height: 60px; border-radius: 50%; background: var(--gradient-primary); color: white; font-size: 1.3rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.9rem; font-family: var(--font-heading); box-shadow: var(--shadow-blue); }
+    .process-step h4 { font-size: 0.95rem; margin-bottom: 0.3rem; }
+    .process-step p { font-size: 0.85rem; }
+    .testimonial-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+    .t-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem; }
+    .t-card p { font-size: 0.9rem; font-style: italic; line-height: 1.7; margin-bottom: 1rem; }
+    .t-author { display: flex; align-items: center; gap: 0.75rem; }
+    .t-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1rem; font-family: var(--font-heading); }
+    .t-author h5 { font-size: 0.9rem; margin-bottom: 0.1rem; }
+    .t-author span { font-size: 0.78rem; color: var(--gray); }
+    .stars { color: #f59e0b; font-size: 0.85rem; margin-bottom: 0.75rem; }
+    @media (max-width: 900px) { .role-cards { grid-template-columns: 1fr 1fr; } .perk-list { grid-template-columns: 1fr; } .earn-breakdown { grid-template-columns: 1fr 1fr; } .process-steps { grid-template-columns: 1fr 1fr; } .testimonial-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .role-cards { grid-template-columns: 1fr; } .earn-breakdown { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- Page Loader -->
+<div class="page-loader" id="page-loader">
+  <div class="loader-logo">
+    <div class="loader-icon">BNI</div>
+    <div class="loader-bar"></div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/bni-logo.png" alt="BNI Services" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mutual-fund.html">Mutual Funds</a></li>
+        <li><a href="general-insurance.html">General Insurance</a></li>
+        <li><a href="life-insurance.html">Life Insurance</a></li>
+        <li><a href="franchise.html">Franchise</a></li>
+        <li><a href="freelance.html" class="active">Freelance</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="tel:+917016064136" class="nav-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 70160 64136
+        </a>
+        <a href="contact.html" class="btn btn-accent">Let's Talk</a>
+      </div>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">🏠 Home</a>
+  <a href="mutual-fund.html">📈 Mutual Funds</a>
+  <a href="general-insurance.html">🛡️ General Insurance</a>
+  <a href="life-insurance.html">❤️ Life Insurance</a>
+  <a href="franchise.html">🏢 Franchise</a>
+  <a href="freelance.html">💼 Freelance</a>
+  <a href="about.html">ℹ️ About Us</a>
+  <a href="contact.html">📞 Contact</a>
+  <a href="contact.html" class="btn btn-primary">Let's Talk</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero freelance-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Freelance</span>
+      </nav>
+      <span class="badge badge-white">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+        Work on Your Terms
+      </span>
+      <h1>Earn as a Freelance<br />Financial Advisor</h1>
+      <p>No fixed office hours. No boss. No salary cap. Join BNI Services as a freelance advisor and earn commissions from Mutual Funds, Insurance, and more — while helping real families secure their future.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ROLE OVERVIEW -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">What You'll Do</span>
+      <h2>Choose Your Advisory Focus</h2>
+      <p>As a BNI freelance advisor, you can specialize in one or all categories — earn commissions on every product you sell.</p>
+    </div>
+    <div class="role-cards">
+      <div class="role-card reveal reveal-delay-1">
+        <div class="role-icon" style="background:rgba(124,58,237,0.1);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <h3>Mutual Fund Advisor</h3>
+        <p>Help clients invest in SIPs, ELSS, and lumpsum funds. Earn trail commission on AUM — the income keeps coming even when you're not working.</p>
+        <span class="earn-tag">0.5% – 1.5% Trail Income</span>
+      </div>
+      <div class="role-card reveal reveal-delay-2">
+        <div class="role-icon" style="background:rgba(239,68,68,0.1);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Insurance Advisor</h3>
+        <p>Advise clients on Health, Motor, Home, and Travel insurance. Earn upfront commissions on every policy sold plus renewal commissions.</p>
+        <span class="earn-tag" style="background:rgba(239,68,68,0.1);color:#dc2626;">10% – 40% Commission</span>
+      </div>
+      <div class="role-card reveal reveal-delay-3">
+        <div class="role-icon" style="background:rgba(16,185,129,0.1);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h3>Life Insurance Advisor</h3>
+        <p>Protect families with Term Plans, ULIPs, and Endowment policies. Life insurance earns the highest first-year commissions in the industry.</p>
+        <span class="earn-tag" style="background:rgba(16,185,129,0.1);color:#059669;">20% – 60% First-Year</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY FREELANCE WITH BNI -->
+<section class="section" style="background:var(--bg);">
+  <div class="container">
+    <div class="detail-grid">
+      <div class="detail-content">
+        <span class="badge reveal">Why BNI</span>
+        <h2 class="reveal">Freelance With Confidence</h2>
+        <p class="reveal">Most financial advisors struggle at the start — no brand support, no product knowledge, and no client trust. BNI Services solves all three. Our freelance program is designed to get you earning in weeks, not months.</p>
+        <p class="reveal">You bring the relationships. We bring the products, compliance, training, and backend support. Together, we build your financial advisory practice.</p>
+
+        <div class="perk-list" style="margin-top:1.5rem;">
+          <div class="perk-item reveal">
+            <div class="perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 16 14"/></svg></div>
+            <div><h4>Flexible Hours</h4><p>Work mornings, evenings, weekends — or full-time. Your schedule, your choice.</p></div>
+          </div>
+          <div class="perk-item reveal">
+            <div class="perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+            <div><h4>Free Training</h4><p>Get trained on products, sales, and compliance at no cost. We invest in your success.</p></div>
+          </div>
+          <div class="perk-item reveal">
+            <div class="perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div><h4>Digital Tools</h4><p>Access BNI's CRM and comparison platforms to serve clients professionally.</p></div>
+          </div>
+          <div class="perk-item reveal">
+            <div class="perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <div><h4>Referral Network</h4><p>Tap into BNI's existing client base and get warm introductions to build your portfolio.</p></div>
+          </div>
+          <div class="perk-item reveal">
+            <div class="perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+            <div><h4>No Investment Needed</h4><p>Zero upfront cost to join as a freelance advisor. Register free and start immediately.</p></div>
+          </div>
+          <div class="perk-item reveal">
+            <div class="perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><h4>Compliance Handled</h4><p>We handle regulatory paperwork — AMFI/IRDAI registration support at no charge.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-sidebar">
+        <!-- Register Form -->
+        <div class="sidebar-card reveal" style="background:linear-gradient(135deg,#1e1b4b,#7c3aed);">
+          <h3>Register as Freelancer</h3>
+          <p style="color:rgba(255,255,255,0.8);margin-bottom:1.25rem;font-size:0.9rem;">Free registration. Get called back within 24 hours by our advisor team.</p>
+          <form style="display:flex;flex-direction:column;gap:0.85rem;" onsubmit="return false;">
+            <input type="text" placeholder="Your Full Name" style="padding:0.8rem 1rem;border-radius:8px;border:none;font-size:0.9rem;font-family:var(--font-body);" required />
+            <input type="tel" placeholder="Phone Number" style="padding:0.8rem 1rem;border-radius:8px;border:none;font-size:0.9rem;font-family:var(--font-body);" required />
+            <input type="email" placeholder="Email Address" style="padding:0.8rem 1rem;border-radius:8px;border:none;font-size:0.9rem;font-family:var(--font-body);" />
+            <select style="padding:0.8rem 1rem;border-radius:8px;border:none;font-size:0.9rem;font-family:var(--font-body);">
+              <option>Area of Interest</option>
+              <option>Mutual Funds</option>
+              <option>General Insurance</option>
+              <option>Life Insurance</option>
+              <option>All Products</option>
+            </select>
+            <select style="padding:0.8rem 1rem;border-radius:8px;border:none;font-size:0.9rem;font-family:var(--font-body);">
+              <option>Experience Level</option>
+              <option>No Experience (Fresher)</option>
+              <option>1–2 Years</option>
+              <option>3–5 Years</option>
+              <option>5+ Years</option>
+            </select>
+            <button type="submit" class="btn btn-accent" style="justify-content:center;width:100%;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              Register Free
+            </button>
+          </form>
+        </div>
+
+        <!-- Quick contact -->
+        <div class="sidebar-quick reveal" style="margin-top:1.5rem;">
+          <h4>Talk to Our Team</h4>
+          <div style="display:flex;flex-direction:column;gap:0.75rem;">
+            <a href="tel:+917016064136" style="display:flex;align-items:center;gap:0.6rem;padding:0.75rem;background:var(--bg);border-radius:10px;border:1px solid var(--border);font-size:0.9rem;color:var(--dark-2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              +91 70160 64136
+            </a>
+            <a href="https://wa.me/917016064136" style="display:flex;align-items:center;gap:0.6rem;padding:0.75rem;background:rgba(37,211,102,0.08);border-radius:10px;border:1px solid rgba(37,211,102,0.2);font-size:0.9rem;color:var(--dark-2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EARNINGS POTENTIAL -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">Earning Potential</span>
+      <h2>What You Can Earn Each Month</h2>
+      <p>Based on performance of active BNI freelance advisors — part-time and full-time.</p>
+    </div>
+    <div class="earn-breakdown">
+      <div class="earn-item reveal reveal-delay-1">
+        <div class="amount">₹5K–₹12K</div>
+        <div class="label">Part-Time Advisor</div>
+        <div class="type">10–15 hrs/week</div>
+      </div>
+      <div class="earn-item reveal reveal-delay-2">
+        <div class="amount">₹15K–₹35K</div>
+        <div class="label">Active Advisor</div>
+        <div class="type">25–30 hrs/week</div>
+      </div>
+      <div class="earn-item reveal reveal-delay-3">
+        <div class="amount">₹40K–₹80K</div>
+        <div class="label">Senior Advisor</div>
+        <div class="type">Full-time + Trail income</div>
+      </div>
+    </div>
+    <div class="reveal" style="margin-top:2rem;background:rgba(124,58,237,0.05);border:1px solid rgba(124,58,237,0.15);border-radius:var(--radius-lg);padding:1.5rem;">
+      <h3 style="font-size:1rem;margin-bottom:1rem;text-align:center;">Sample Monthly Income Calculation</h3>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+          <thead>
+            <tr style="background:rgba(124,58,237,0.08);">
+              <th style="padding:0.7rem 1rem;text-align:left;font-weight:600;">Activity</th>
+              <th style="padding:0.7rem 1rem;text-align:right;font-weight:600;">Volume</th>
+              <th style="padding:0.7rem 1rem;text-align:right;font-weight:600;">Est. Commission</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border);"><td style="padding:0.65rem 1rem;">5 SIP clients × ₹5,000/mo AUM</td><td style="padding:0.65rem 1rem;text-align:right;">₹25,000/mo</td><td style="padding:0.65rem 1rem;text-align:right;color:var(--primary);font-weight:600;">₹1,250</td></tr>
+            <tr style="border-bottom:1px solid var(--border);"><td style="padding:0.65rem 1rem;">2 Health Insurance policies</td><td style="padding:0.65rem 1rem;text-align:right;">₹15,000 premium</td><td style="padding:0.65rem 1rem;text-align:right;color:var(--primary);font-weight:600;">₹3,750</td></tr>
+            <tr style="border-bottom:1px solid var(--border);"><td style="padding:0.65rem 1rem;">1 Term Life Insurance</td><td style="padding:0.65rem 1rem;text-align:right;">₹20,000 premium</td><td style="padding:0.65rem 1rem;text-align:right;color:var(--primary);font-weight:600;">₹7,000</td></tr>
+            <tr><td style="padding:0.65rem 1rem;">2 Motor Insurance renewals</td><td style="padding:0.65rem 1rem;text-align:right;">₹8,000 premium</td><td style="padding:0.65rem 1rem;text-align:right;color:var(--primary);font-weight:600;">₹1,200</td></tr>
+          </tbody>
+          <tfoot>
+            <tr style="background:rgba(124,58,237,0.08);font-weight:700;">
+              <td style="padding:0.75rem 1rem;" colspan="2">Monthly Total (Part-Time)</td>
+              <td style="padding:0.75rem 1rem;text-align:right;color:var(--primary);font-size:1.05rem;">~₹13,200</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <p style="font-size:0.78rem;color:var(--gray);margin-top:0.75rem;text-align:center;">*Figures are estimates. Actual earnings vary by client base, product mix, and effort.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO START -->
+<section class="section" style="background:var(--bg);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">Getting Started</span>
+      <h2>Begin in 4 Easy Steps</h2>
+      <p>Zero investment, fast onboarding, and full support from BNI's experienced team.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal reveal-delay-1">
+        <div class="p-icon">1</div>
+        <h4>Register Online</h4>
+        <p>Fill the freelance registration form. Takes 2 minutes — completely free.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="p-icon">2</div>
+        <h4>Attend Training</h4>
+        <p>Complete BNI's 3-day product and compliance training (online or in-person).</p>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="p-icon">3</div>
+        <h4>Get Certified</h4>
+        <p>We assist with AMFI/IRDAI registration and certification — at no extra cost.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="p-icon">4</div>
+        <h4>Start Advising</h4>
+        <p>Begin serving clients using BNI tools. Earn commissions from your very first sale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">Success Stories</span>
+      <h2>What Our Advisors Say</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="t-card reveal reveal-delay-1">
+        <div class="stars">★★★★★</div>
+        <p>"I was a teacher looking for additional income. Within 3 months of joining BNI as a freelance advisor, I was earning ₹18,000 extra per month from insurance alone."</p>
+        <div class="t-author">
+          <div class="t-avatar">PR</div>
+          <div><h5>Priya Rathod</h5><span>Teacher → Freelance Advisor, Vadodara</span></div>
+        </div>
+      </div>
+      <div class="t-card reveal reveal-delay-2">
+        <div class="stars">★★★★★</div>
+        <p>"The trail income from mutual funds is the best part. Even on months when I don't close new clients, I still get passive income from my existing AUM portfolio."</p>
+        <div class="t-author">
+          <div class="t-avatar">MJ</div>
+          <div><h5>Mihir Joshi</h5><span>Full-time Freelance Advisor, Anand</span></div>
+        </div>
+      </div>
+      <div class="t-card reveal reveal-delay-3">
+        <div class="stars">★★★★★</div>
+        <p>"BNI's training was excellent. Even though I had no finance background, I was confident enough to start advising clients within a week. The team is always available."</p>
+        <div class="t-author">
+          <div class="t-avatar">SK</div>
+          <div><h5>Shruti Kapadia</h5><span>Part-time Advisor, Bharuch</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO SHOULD JOIN -->
+<section class="section" style="background:var(--bg);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">Ideal for</span>
+      <h2>Who Should Join BNI Freelance?</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;">
+      <div class="reveal reveal-delay-1" style="text-align:center;padding:1.5rem;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);">
+        <div style="font-size:2.5rem;margin-bottom:0.75rem;">👩‍🏫</div>
+        <h4 style="font-size:0.95rem;margin-bottom:0.3rem;">Teachers & Educators</h4>
+        <p style="font-size:0.82rem;">Great people skills, built-in networks — perfect for part-time advisory.</p>
+      </div>
+      <div class="reveal reveal-delay-2" style="text-align:center;padding:1.5rem;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);">
+        <div style="font-size:2.5rem;margin-bottom:0.75rem;">🏠</div>
+        <h4 style="font-size:0.95rem;margin-bottom:0.3rem;">Homemakers</h4>
+        <p style="font-size:0.82rem;">Work from home, flexible hours, earn on your own terms.</p>
+      </div>
+      <div class="reveal reveal-delay-3" style="text-align:center;padding:1.5rem;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);">
+        <div style="font-size:2.5rem;margin-bottom:0.75rem;">🎓</div>
+        <h4 style="font-size:0.95rem;margin-bottom:0.3rem;">Fresh Graduates</h4>
+        <p style="font-size:0.82rem;">Start your career in financial services without investment or experience.</p>
+      </div>
+      <div class="reveal" style="text-align:center;padding:1.5rem;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);">
+        <div style="font-size:2.5rem;margin-bottom:0.75rem;">💼</div>
+        <h4 style="font-size:0.95rem;margin-bottom:0.3rem;">Working Professionals</h4>
+        <p style="font-size:0.82rem;">Diversify your income. Advise friends and family after office hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content text-center">
+      <span class="badge badge-white reveal">Join Us Today</span>
+      <h2 class="text-white reveal">Start Earning on Your Own Schedule</h2>
+      <p class="text-white reveal" style="opacity:0.85;margin-bottom:2rem;">Register as a BNI freelance financial advisor for free. Get trained, certified, and start earning within weeks — no prior experience required.</p>
+      <div class="cta-actions reveal" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="tel:+917016064136" class="btn btn-white btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Us Free
+        </a>
+        <a href="https://wa.me/917016064136" class="btn btn-accent btn-lg">
+          Register via WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/bni-logo.png" alt="BNI Services" class="footer-logo-img" />
+        <p>Your trusted financial partner for Mutual Fund investments, Life Insurance, General Insurance and Business Consulting in Vadodara since 2013.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://wa.me/917016064136" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Home</a></li>
+          <li><a href="mutual-fund.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Mutual Funds</a></li>
+          <li><a href="general-insurance.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>General Insurance</a></li>
+          <li><a href="life-insurance.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Life Insurance</a></li>
+          <li><a href="franchise.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Franchise</a></li>
+          <li><a href="freelance.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Freelance</a></li>
+          <li><a href="about.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>About Us</a></li>
+          <li><a href="contact.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul class="footer-links">
+          <li><a href="mutual-fund.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>SIP Investment</a></li>
+          <li><a href="general-insurance.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Health Insurance</a></li>
+          <li><a href="general-insurance.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Motor Insurance</a></li>
+          <li><a href="life-insurance.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Term Insurance</a></li>
+          <li><a href="franchise.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Franchise</a></li>
+          <li><a href="freelance.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Freelance Advisor</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get In Touch</h4>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="footer-contact-text"><strong>Office</strong><span>TF-39, Siddheshwar Hallmark, Ajwa Road, Vadodara – 390019</span></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="footer-contact-text"><strong>Phone</strong><a href="tel:+917016064136">+91 70160 64136</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 BNI Insurance & Investment Services. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/917016064136" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  Chat on WhatsApp
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

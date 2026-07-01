@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BNI Services Franchise – Own a profitable financial advisory franchise in Insurance and Mutual Funds. Join 40+ partner firms across Gujarat." />
+  <title>Franchise Opportunity – BNI Services</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .franchise-hero { background: linear-gradient(135deg, #0f172a 0%, #3b0764 100%); }
+    .benefit-card { background: var(--white); border-radius: var(--radius-lg); padding: 1.75rem; border: 1px solid var(--border); transition: var(--transition); }
+    .benefit-card:hover { border-color: var(--primary); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .benefit-icon { width: 52px; height: 52px; border-radius: 14px; background: rgba(124,58,237,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .benefit-icon svg { width: 24px; height: 24px; color: var(--primary); }
+    .benefit-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .benefit-card p { font-size: 0.9rem; }
+    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .steps-timeline { display: flex; flex-direction: column; gap: 1.25rem; max-width: 780px; }
+    .step-item { display: flex; gap: 1.25rem; align-items: flex-start; }
+    .step-num { width: 44px; height: 44px; border-radius: 50%; background: var(--gradient-primary); color: white; font-weight: 800; font-size: 1rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: var(--font-heading); box-shadow: var(--shadow-blue); }
+    .step-content h4 { font-size: 1rem; margin-bottom: 0.3rem; }
+    .step-content p { font-size: 0.9rem; }
+    .invest-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    .invest-table th { background: var(--gradient-primary); color: white; padding: 0.9rem 1.2rem; text-align: left; font-size: 0.9rem; }
+    .invest-table th:first-child { border-radius: 10px 0 0 0; }
+    .invest-table th:last-child { border-radius: 0 10px 0 0; }
+    .invest-table td { padding: 0.85rem 1.2rem; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+    .invest-table tr:hover td { background: var(--bg); }
+    .highlight-row td { font-weight: 700; color: var(--primary); }
+    .earn-card { background: var(--gradient-primary); border-radius: var(--radius-lg); padding: 2rem; color: white; text-align: center; }
+    .earn-card h3 { color: white; font-size: 1.4rem; margin-bottom: 0.5rem; }
+    .earn-card p { color: rgba(255,255,255,0.8); margin-bottom: 1.25rem; }
+    .earn-amount { font-size: 2.5rem; font-weight: 800; font-family: var(--font-heading); color: var(--accent); }
+    .support-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .support-item { display: flex; gap: 1rem; align-items: flex-start; padding: 1.2rem; background: var(--bg); border-radius: var(--radius); border: 1px solid var(--border); }
+    .support-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(124,58,237,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .support-icon svg { width: 20px; height: 20px; color: var(--primary); }
+    .support-item h4 { font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .support-item p { font-size: 0.85rem; }
+    .faq-item { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 0.75rem; }
+    .faq-item summary { padding: 1rem 1.25rem; font-weight: 600; cursor: pointer; font-family: var(--font-heading); color: var(--dark); list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .faq-item summary::after { content: '+'; font-size: 1.2rem; color: var(--primary); }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-body { padding: 0 1.25rem 1rem; color: var(--gray); font-size: 0.92rem; line-height: 1.7; }
+    @media (max-width: 900px) { .benefits-grid { grid-template-columns: 1fr 1fr; } .support-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .benefits-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- Page Loader -->
+<div class="page-loader" id="page-loader">
+  <div class="loader-logo">
+    <div class="loader-icon">BNI</div>
+    <div class="loader-bar"></div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/bni-logo.png" alt="BNI Services" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mutual-fund.html">Mutual Funds</a></li>
+        <li><a href="general-insurance.html">General Insurance</a></li>
+        <li><a href="life-insurance.html">Life Insurance</a></li>
+        <li><a href="franchise.html" class="active">Franchise</a></li>
+        <li><a href="freelance.html">Freelance</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="tel:+917016064136" class="nav-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 70160 64136
+        </a>
+        <a href="contact.html" class="btn btn-accent">Let's Talk</a>
+      </div>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">🏠 Home</a>
+  <a href="mutual-fund.html">📈 Mutual Funds</a>
+  <a href="general-insurance.html">🛡️ General Insurance</a>
+  <a href="life-insurance.html">❤️ Life Insurance</a>
+  <a href="franchise.html">🏢 Franchise</a>
+  <a href="freelance.html">💼 Freelance</a>
+  <a href="about.html">ℹ️ About Us</a>
+  <a href="contact.html">📞 Contact</a>
+  <a href="contact.html" class="btn btn-primary">Let's Talk</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero franchise-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Franchise</span>
+      </nav>
+      <span class="badge badge-white">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        Business Opportunity
+      </span>
+      <h1>Start Your Own Financial<br />Advisory Franchise</h1>
+      <p>Partner with BNI Services and build a profitable business in Insurance & Mutual Fund advisory — backed by a brand trusted by 500+ families across Gujarat.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="detail-grid">
+      <div class="detail-content">
+        <span class="badge reveal">Why BNI Franchise</span>
+        <h2 class="reveal">A Business That Grows With You</h2>
+        <p class="reveal">The financial services industry in India is growing at 15%+ annually — and BNI Services gives you a proven, ready-to-run business model to tap into this opportunity. Our franchise partners get the brand credibility, training, technology, and product access to start earning from Day 1.</p>
+        <p class="reveal">With 40+ consulting partners already operating across Gujarat, our franchise model is built on real-world experience — not just a concept. We know what works, and we'll help you replicate it.</p>
+
+        <img class="detail-banner reveal" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=80" alt="Business partners shaking hands at a franchise meeting" loading="lazy" />
+
+        <!-- Key Numbers -->
+        <div style="margin-top:1.5rem;">
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;">
+            <div class="reveal" style="background:rgba(124,58,237,0.06);border:1px solid rgba(124,58,237,0.15);border-radius:12px;padding:1.25rem;text-align:center;">
+              <div style="font-size:2rem;font-weight:800;color:var(--primary);font-family:var(--font-heading);">40+</div>
+              <div style="font-size:0.85rem;color:var(--gray);">Active Franchise Partners</div>
+            </div>
+            <div class="reveal" style="background:rgba(124,58,237,0.06);border:1px solid rgba(124,58,237,0.15);border-radius:12px;padding:1.25rem;text-align:center;">
+              <div style="font-size:2rem;font-weight:800;color:var(--primary);font-family:var(--font-heading);">10+</div>
+              <div style="font-size:0.85rem;color:var(--gray);">Years Brand Track Record</div>
+            </div>
+            <div class="reveal" style="background:rgba(124,58,237,0.06);border:1px solid rgba(124,58,237,0.15);border-radius:12px;padding:1.25rem;text-align:center;">
+              <div style="font-size:2rem;font-weight:800;color:var(--accent);font-family:var(--font-heading);">₹30K+</div>
+              <div style="font-size:0.85rem;color:var(--gray);">Avg Monthly Partner Earnings</div>
+            </div>
+            <div class="reveal" style="background:rgba(124,58,237,0.06);border:1px solid rgba(124,58,237,0.15);border-radius:12px;padding:1.25rem;text-align:center;">
+              <div style="font-size:2rem;font-weight:800;color:var(--success);font-family:var(--font-heading);">3 Months</div>
+              <div style="font-size:0.85rem;color:var(--gray);">Avg Break-Even Time</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="detail-sidebar">
+        <div class="sidebar-card reveal" style="background:linear-gradient(135deg,#7c3aed,#a855f7);">
+          <h3>Apply for Franchise</h3>
+          <p style="color:rgba(255,255,255,0.8);margin-bottom:1.25rem;font-size:0.9rem;">Fill in your details and our partnership team will contact you within 24 hours.</p>
+          <form style="display:flex;flex-direction:column;gap:0.85rem;" onsubmit="return false;">
+            <input type="text" placeholder="Your Full Name" style="padding:0.8rem 1rem;border-radius:8px;border:none;font-size:0.9rem;font-family:var(--font-body);" required />
+            <input type="tel" placeholder="Phone Number" style="padding:0.8rem 1rem;border-radius:8px;border:none;font-size:0.9rem;font-family:var(--font-body);" required />
+            <input type="email" placeholder="Email Address" style="padding:0.8rem 1rem;border-radius:8px;border:none;font-size:0.9rem;font-family:var(--font-body);" />
+            <select style="padding:0.8rem 1rem;border-radius:8px;border:none;font-size:0.9rem;font-family:var(--font-body);">
+              <option>City / Location</option>
+              <option>Vadodara</option>
+              <option>Ahmedabad</option>
+              <option>Surat</option>
+              <option>Rajkot</option>
+              <option>Other</option>
+            </select>
+            <select style="padding:0.8rem 1rem;border-radius:8px;border:none;font-size:0.9rem;font-family:var(--font-body);">
+              <option>Investment Capacity</option>
+              <option>Under ₹50,000</option>
+              <option>₹50,000 – ₹1 Lakh</option>
+              <option>₹1 Lakh – ₹3 Lakh</option>
+              <option>Above ₹3 Lakh</option>
+            </select>
+            <button type="submit" class="btn btn-accent" style="justify-content:center;width:100%;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              Request Franchise Info
+            </button>
+          </form>
+        </div>
+
+        <div class="sidebar-quick reveal" style="margin-top:1.5rem;">
+          <h4>Contact Partnership Team</h4>
+          <div style="display:flex;flex-direction:column;gap:0.75rem;">
+            <a href="tel:+917016064136" style="display:flex;align-items:center;gap:0.6rem;padding:0.75rem;background:var(--bg);border-radius:10px;border:1px solid var(--border);font-size:0.9rem;color:var(--dark-2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              +91 70160 64136
+            </a>
+            <a href="https://wa.me/917016064136" style="display:flex;align-items:center;gap:0.6rem;padding:0.75rem;background:rgba(37,211,102,0.08);border-radius:10px;border:1px solid rgba(37,211,102,0.2);font-size:0.9rem;color:var(--dark-2);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section" style="background:var(--bg);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">What You Get</span>
+      <h2>Everything You Need to Succeed</h2>
+      <p>BNI franchise partners receive end-to-end support — from setup to scaling.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card reveal reveal-delay-1">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Brand Authority</h3>
+        <p>Use the BNI Services brand, logo, and reputation — 10+ years of trust that opens doors for you from day one.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-2">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3>Full Training Program</h3>
+        <p>Comprehensive 2-week onboarding covering products, sales scripts, compliance, and digital tools.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-3">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>Technology & Tools</h3>
+        <p>Access to our CRM, client portfolio tracker, policy comparison tools, and digital onboarding platform.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-1">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <h3>High Commission Rates</h3>
+        <p>Earn attractive commissions on Mutual Fund AUM, Life and General Insurance — with performance bonuses.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-2">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h3>Lead Support</h3>
+        <p>We share regional leads and referrals with active franchise partners to help you build your client base faster.</p>
+      </div>
+      <div class="benefit-card reveal reveal-delay-3">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h3>Dedicated Mentor</h3>
+        <p>Every franchise partner is assigned a senior BNI advisor who provides ongoing guidance and deal support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT & EARNINGS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="badge">Investment & Returns</span>
+      <h2>Transparent Investment Plans</h2>
+      <p>Choose the plan that fits your goal — all include full BNI support and product access.</p>
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="invest-table reveal">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Starter Plan</th>
+            <th>Growth Plan</th>
+            <th>Premium Plan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Franchise Fee</td><td>₹25,000</td><td>₹50,000</td><td>₹1,00,000</td></tr>
+          <tr><td>Products Access</td><td>Mutual Funds + LI</td><td>All Products</td><td>All Products</td></tr>
+          <tr><td>Training</td><td>Basic (2 days)</td><td>Full Program (2 weeks)</td><td>Full + Advanced</td></tr>
+          <tr><td>CRM & Tools</td><td>Basic</td><td>Full Suite</td><td>Full Suite + Priority</td></tr>
+          <tr><td>Dedicated Mentor</td><td>✗</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Lead Sharing</td><td>✗</td><td>Regional Leads</td><td>Priority Leads</td></tr>
+          <tr class="highlight-row"><td>Commission Rate</td><td>Up to 40%</td><td>Up to 55%</td><td>Up to 70%</td></tr>
+          <tr><td>Support</td><td>Email</td><td>Phone + Email</td><td>Dedicated Manager</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO JOIN -->
+<section class="section" style="background:var(--bg);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
+      <div>
+        <div class="section-header reveal" style="text-align:left;margin:0 0 1.5rem;">
+          <span class="badge">How to Join</span>
+          <h2>4 Simple Steps to Get Started</h2>
+          <p>From inquiry to your first client — we guide you every step of the way.</p>
+        </div>
+        <div class="steps-timeline">
+          <div class="step-item reveal reveal-delay-1">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4>Submit Your Application</h4>
+              <p>Fill out the franchise inquiry form. Our team will reach out within 24 hours to understand your goals and location.</p>
+            </div>
+          </div>
+          <div class="step-item reveal reveal-delay-2">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4>Meet & Discussion</h4>
+              <p>In-person or virtual meeting with our franchise team to walk you through the model, plans, and expectations.</p>
+            </div>
+          </div>
+          <div class="step-item reveal reveal-delay-3">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4>Agreement & Onboarding</h4>
+              <p>Sign the franchise agreement, complete AMFI/IRDAI registration with our help, and undergo training.</p>
+            </div>
+          </div>
+          <div class="step-item reveal">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h4>Launch & Start Earning</h4>
+              <p>Go live with full BNI support — start serving clients, earning commissions, and growing your business.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="earn-card reveal">
+          <h3>Estimated Monthly Earnings</h3>
+          <p>Based on active franchise partners' average performance</p>
+          <div class="earn-amount">₹30,000 – ₹80,000</div>
+          <p style="font-size:0.8rem;margin-top:0.5rem;opacity:0.7;">*Earnings depend on client base, product mix, and activity level</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem;">
+            <div style="background:rgba(255,255,255,0.15);border-radius:10px;padding:1rem;text-align:center;">
+              <div style="font-size:1.4rem;font-weight:800;">₹8K+</div>
+              <div style="font-size:0.8rem;opacity:0.8;">Mutual Fund Trail</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.15);border-radius:10px;padding:1rem;text-align:center;">
+              <div style="font-size:1.4rem;font-weight:800;">₹15K+</div>
+              <div style="font-size:0.8rem;opacity:0.8;">Insurance Commission</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.15);border-radius:10px;padding:1rem;text-align:center;">
+              <div style="font-size:1.4rem;font-weight:800;">₹5K+</div>
+              <div style="font-size:0.8rem;opacity:0.8;">Referral Bonus</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.15);border-radius:10px;padding:1rem;text-align:center;">
+              <div style="font-size:1.4rem;font-weight:800;">Recurring</div>
+              <div style="font-size:0.8rem;opacity:0.8;">Passive Trail Income</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="support-grid" style="margin-top:1.25rem;">
+          <div class="support-item reveal">
+            <div class="support-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+            <div><h4>AMFI Registered</h4><p style="font-size:0.82rem;">We help you get regulatory certifications.</p></div>
+          </div>
+          <div class="support-item reveal">
+            <div class="support-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><h4>Fast Setup</h4><p style="font-size:0.82rem;">Operational in under 3 weeks.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div style="max-width:780px;margin:0 auto;">
+      <div class="section-header reveal">
+        <span class="badge">FAQ</span>
+        <h2>Common Questions</h2>
+      </div>
+      <details class="faq-item reveal"><summary>Do I need prior experience in finance?</summary><div class="faq-body">No prior finance experience is required. We provide full training — from product knowledge to sales techniques. A willingness to learn and connect with people is all you need.</div></details>
+      <details class="faq-item reveal"><summary>What is the minimum investment to start?</summary><div class="faq-body">Our Starter Plan begins at ₹25,000. This covers the franchise fee, registration support, and basic training. Higher plans offer more tools, leads, and earning potential.</div></details>
+      <details class="faq-item reveal"><summary>Can I run this as a part-time business?</summary><div class="faq-body">Yes. Many of our franchise partners started part-time and scaled to full-time once their earnings exceeded their primary income. The model is flexible.</div></details>
+      <details class="faq-item reveal"><summary>Will BNI Services share leads with me?</summary><div class="faq-body">Growth and Premium plan partners receive regional leads shared by the BNI head office. Starter plan partners can upgrade to access lead sharing after 3 months.</div></details>
+      <details class="faq-item reveal"><summary>Is there a renewal fee every year?</summary><div class="faq-body">There is a nominal annual renewal fee which is waived for partners who meet their annual target. Details are covered in the franchise agreement.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content text-center">
+      <span class="badge badge-white reveal">Start Today</span>
+      <h2 class="text-white reveal">Ready to Build Your Financial Advisory Business?</h2>
+      <p class="text-white reveal" style="opacity:0.85;margin-bottom:2rem;">Join 40+ BNI franchise partners earning steady income from insurance and investments. Enquire now — limited slots available in your city.</p>
+      <div class="cta-actions reveal" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="tel:+917016064136" class="btn btn-white btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Now
+        </a>
+        <a href="https://wa.me/917016064136" class="btn btn-accent btn-lg">
+          Apply via WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/bni-logo.png" alt="BNI Services" class="footer-logo-img" />
+        <p>Your trusted financial partner for Mutual Fund investments, Life Insurance, General Insurance and Business Consulting in Vadodara since 2013.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://wa.me/917016064136" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Home</a></li>
+          <li><a href="mutual-fund.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Mutual Funds</a></li>
+          <li><a href="general-insurance.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>General Insurance</a></li>
+          <li><a href="life-insurance.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Life Insurance</a></li>
+          <li><a href="franchise.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Franchise</a></li>
+          <li><a href="freelance.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Freelance</a></li>
+          <li><a href="about.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>About Us</a></li>
+          <li><a href="contact.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul class="footer-links">
+          <li><a href="mutual-fund.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>SIP Investment</a></li>
+          <li><a href="general-insurance.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Health Insurance</a></li>
+          <li><a href="general-insurance.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Motor Insurance</a></li>
+          <li><a href="life-insurance.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Term Insurance</a></li>
+          <li><a href="franchise.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Franchise</a></li>
+          <li><a href="freelance.html"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Freelance Advisor</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get In Touch</h4>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="footer-contact-text"><strong>Office</strong><span>TF-39, Siddheshwar Hallmark, Ajwa Road, Vadodara – 390019</span></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .82h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="footer-contact-text"><strong>Phone</strong><a href="tel:+917016064136">+91 70160 64136</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 BNI Insurance & Investment Services. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/917016064136" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  Chat on WhatsApp
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
