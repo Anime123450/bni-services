@@ -1,40 +1,41 @@
 # BNI Services – Insurance & Investment Website
 
-A fully responsive, multi-page static website built for **BNI Services**, a financial advisory firm based in Vadodara, Gujarat. The site covers their core offerings — Mutual Fund investments, Life Insurance, and General Insurance — and is designed to build trust with prospective clients through clean visuals, clear copy, and easy navigation.
+A fully responsive, multi-page static website built for **BNI Insurance & Investment Services**, a financial advisory firm based in Vadodara, Gujarat. The site covers their complete service portfolio — Mutual Fund investments, Life Insurance, General Insurance, Franchise opportunities, and Freelance advisory roles — with a design focused on building client trust through clear communication and professional presentation.
 
 ![BNI Services Preview](assets/preview.png)
 
----
-
-## Live Preview
-
-Open `index.html` in any browser — no build step or server needed.
+**Live site:** [anime123450.github.io/bni-services](https://anime123450.github.io/bni-services/)
 
 ---
 
 ## Pages
 
-| File | Route | Description |
-|---|---|---|
-| `index.html` | `/` | Homepage — hero, stats, services overview, why choose us, testimonials, CTA |
-| `about.html` | `/about` | Company story, team section, mission & values |
-| `mutual-fund.html` | `/mutual-fund` | Mutual fund investment plans, SIP calculator info, fund types |
-| `general-insurance.html` | `/general-insurance` | Health, motor, home & travel insurance detail page |
-| `life-insurance.html` | `/life-insurance` | Term, ULIP, and endowment plan detail page |
-| `contact.html` | `/contact` | Contact form, office address, call/WhatsApp links |
+| File | Description |
+|---|---|
+| `index.html` | Homepage — hero section, key stats, services overview, why choose BNI, testimonials, CTA |
+| `about.html` | Company story, founding timeline, team section, mission & values |
+| `mutual-fund.html` | SIP, lumpsum, ELSS, and goal-based mutual fund advisory with consultation form |
+| `general-insurance.html` | Health, motor, home & travel insurance plans with quote request form |
+| `life-insurance.html` | Term plans, ULIPs, endowment policies and plan comparison |
+| `franchise.html` | Franchise opportunity page — plans, investment table, earnings breakdown, FAQ, apply form |
+| `freelance.html` | Freelance financial advisor recruitment — roles, earnings calculator, onboarding steps, testimonials |
+| `contact.html` | Contact form, office address, phone/WhatsApp/email, embedded Google Map |
 
 ---
 
 ## Features
 
 - **Zero dependencies** — pure HTML5, CSS3, and vanilla JavaScript. No frameworks, no npm, no build tools.
-- **Responsive layout** — works on mobile, tablet, and desktop. Hamburger menu on small screens.
-- **Page loader** — branded BNI loader animation on every page entry.
-- **Scroll reveal animations** — sections and cards animate in as the user scrolls down.
-- **Sticky navbar** — shrinks and adds a shadow on scroll, always accessible.
-- **Real photography** — contextual images throughout (advisor meetings, health imagery, family photography) for a professional feel.
-- **Consistent design system** — shared CSS variables for colors, typography, spacing, shadows, and border radii across all pages.
-- **Accessible markup** — semantic HTML elements (`<nav>`, `<section>`, `<main>`, `<footer>`), ARIA labels on interactive elements, `alt` text on all images.
+- **Responsive layout** — works on mobile, tablet, and widescreen. Hamburger menu collapses the full navbar on small screens.
+- **1500px max-width layout** — wide container optimised for modern displays without feeling stretched on ultra-wide screens.
+- **Real BNI logo** — official BNI Services logo used in the navbar and footer across every page.
+- **Page loader** — branded BNI loader with animated progress bar plays on every page entry.
+- **Scroll reveal animations** — sections, cards and elements animate in as the user scrolls using IntersectionObserver.
+- **Sticky navbar** — shrinks on scroll, always accessible. Active page link highlighted automatically.
+- **WhatsApp float** — persistent WhatsApp shortcut button on every page for instant client contact.
+- **Sidebar forms** — each service page has a contextual lead capture form (quote / callback / apply) in the sidebar.
+- **Consistent design system** — CSS custom properties for colors, typography, spacing, shadows, gradients, and transitions. Change a variable once, updates everywhere.
+- **Purple brand theme** — complete purple color scheme (`#7c3aed`) matching the BNI Services brand identity.
 
 ---
 
@@ -42,47 +43,68 @@ Open `index.html` in any browser — no build step or server needed.
 
 ```
 bni-services/
-├── index.html              # Homepage
-├── about.html              # About Us page
-├── mutual-fund.html        # Mutual Fund service page
-├── general-insurance.html  # General Insurance service page
-├── life-insurance.html     # Life Insurance service page
-├── contact.html            # Contact page
+├── index.html
+├── about.html
+├── mutual-fund.html
+├── general-insurance.html
+├── life-insurance.html
+├── franchise.html
+├── freelance.html
+├── contact.html
 ├── assets/
-│   └── preview.png         # README preview screenshot
+│   ├── bni-logo.png        # Official BNI Services logo (navbar + footer)
+│   └── preview.png         # README hero screenshot
 ├── css/
-│   └── style.css           # All styles — variables, layout, components, utilities
+│   └── style.css           # All styles — variables, layout, components, pages, utilities, responsive
 └── js/
-    └── main.js             # Page loader, navbar scroll, mobile menu, reveal animations
+    └── main.js             # Page loader, navbar scroll behaviour, mobile menu, scroll reveal
 ```
 
 ---
 
-## Design Decisions
+## Design System
 
 ### Color Palette
+
 | Token | Value | Used for |
 |---|---|---|
-| `--primary` | `#1d4ed8` | Primary buttons, active links, badges |
-| `--primary-dark` | `#1e40af` | Hover states |
-| `--accent` | `#f59e0b` | CTA button, highlight text |
-| `--dark` | `#0f172a` | Backgrounds, headings |
-| `--muted` | `#64748b` | Body text, captions |
+| `--primary` | `#7c3aed` | Buttons, active links, badges, icons |
+| `--primary-dark` | `#6d28d9` | Hover states |
+| `--primary-light` | `#8b5cf6` | Subtle accents |
+| `--accent` | `#f59e0b` | CTA buttons, highlighted text |
+| `--dark` | `#0f172a` | Dark backgrounds, headings |
+| `--success` | `#10b981` | Trust indicators, checkmarks |
 
 ### Typography
-- **Headings** — `Syne` (Google Fonts) — geometric, modern
-- **Body** — `Inter` (Google Fonts) — clean, highly legible at small sizes
+
+- **Headings** — `Syne` (Google Fonts) — geometric, modern, high visual weight
+- **Body** — `Inter` (Google Fonts) — neutral, highly legible at all sizes
 
 ### Layout
-- 12-column grid via CSS custom grid utilities
-- `max-width: 1280px` container, centered with horizontal padding
-- Section vertical padding intentionally kept tight to avoid wasted whitespace
+
+- Container: `max-width: 1500px`, `padding: 0 2rem`, horizontally centered
+- Section padding: `2.25rem 0` standard, `1.75rem 0` compact variant
+- Sidebar pattern: 60/40 split (`detail-grid`) on service and opportunity pages
+- Card grids: 3-column on desktop, 2 on tablet, 1 on mobile
+
+---
+
+## Key Pages — Section Breakdown
+
+### Homepage (`index.html`)
+Hero → Stats bar → Services cards → Why BNI → Testimonials → Partners → CTA → Footer
+
+### Franchise (`franchise.html`)
+Hero → Intro + key numbers → Benefits grid (6 cards) → Investment & plans table → How to join (4 steps) → Earnings estimator → FAQ accordion → CTA
+
+### Freelance (`freelance.html`)
+Hero → Role cards (MF / GI / LI advisor) → Why BNI freelance + perks → Earnings breakdown + sample income table → 4-step onboarding → Testimonials → Who should join → CTA
 
 ---
 
 ## Running Locally
 
-No server needed for most features. Just open the file:
+No server or build step required. Open directly in any browser:
 
 ```bash
 # macOS / Linux
@@ -92,21 +114,31 @@ open index.html
 start index.html
 ```
 
-If you want to test with a local server (e.g., to avoid CORS issues with future enhancements):
+To serve over HTTP (e.g. for testing form behaviour or map embeds):
 
 ```bash
 # Python 3
 python -m http.server 8000
-# then visit http://localhost:8000
+# Visit: http://localhost:8000
 ```
 
 ---
 
 ## Browser Support
 
-Tested and working on:
-- Chrome 120+
-- Microsoft Edge 120+
-- Firefox 121+
-- Safari 17+
+| Browser | Version |
+|---|---|
+| Chrome | 120+ |
+| Microsoft Edge | 120+ |
+| Firefox | 121+ |
+| Safari | 17+ |
 
+---
+
+## About BNI Services
+
+BNI Insurance & Investment Services is a Vadodara-based financial advisory firm founded in 2013. AMFI registered and IRDAI authorised, they help 500+ families and businesses with Mutual Fund investments, Life Insurance, General Insurance, and financial planning across Gujarat.
+
+**Office:** TF-39, Siddheshwar Hallmark, Ajwa Road, Vadodara – 390019
+**Phone:** +91 70160 64136
+**Web:** [bniservices.in](https://bniservices.in)
