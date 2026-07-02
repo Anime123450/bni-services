@@ -1,0 +1,14 @@
+# Temp audit screenshots
+assets/audit_*.png
+assets/shot_*.png
+assets/full_*.png
+assets/v2_*.png
+assets/ss_*.png
+
+# Temp HTML files used for screenshotting
+__audit_*.html
+__ss_*.html
+
+# OS files
+.DS_Store
+Thumbs.db
