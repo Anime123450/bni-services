@@ -11,14 +11,16 @@
     .role-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
     .role-card { background: var(--white); border-radius: var(--radius-lg); padding: 1.75rem; border: 1px solid var(--border); text-align: center; transition: var(--transition); }
     .role-card:hover { border-color: var(--primary); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
-    .role-card .role-icon { width: 60px; height: 60px; border-radius: 18px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; }
+    .role-card .role-img { height: 160px; margin: -1.75rem -1.75rem 1rem; overflow: hidden; border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+    .role-card .role-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+    .role-card:hover .role-img img { transform: scale(1.06); }
     .role-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
     .role-card p { font-size: 0.88rem; }
     .role-card .earn-tag { margin-top: 1rem; display: inline-block; background: rgba(124,58,237,0.1); color: var(--primary); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
     .perk-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
     .perk-item { display: flex; gap: 0.9rem; align-items: flex-start; padding: 1.1rem; background: var(--white); border-radius: var(--radius); border: 1px solid var(--border); }
-    .perk-icon { width: 38px; height: 38px; border-radius: 10px; background: rgba(124,58,237,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .perk-icon svg { width: 18px; height: 18px; color: var(--primary); }
+    .perk-icon { width: 56px; height: 56px; border-radius: 10px; overflow: hidden; flex-shrink: 0; }
+    .perk-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .perk-item h4 { font-size: 0.9rem; margin-bottom: 0.2rem; }
     .perk-item p { font-size: 0.82rem; }
     .earn-breakdown { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
@@ -35,7 +37,7 @@
     .t-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem; }
     .t-card p { font-size: 0.9rem; font-style: italic; line-height: 1.7; margin-bottom: 1rem; }
     .t-author { display: flex; align-items: center; gap: 0.75rem; }
-    .t-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1rem; font-family: var(--font-heading); }
+    .t-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1rem; font-family: var(--font-heading); overflow: hidden; flex-shrink: 0; }
     .t-author h5 { font-size: 0.9rem; margin-bottom: 0.1rem; }
     .t-author span { font-size: 0.78rem; color: var(--gray); }
     .stars { color: #f59e0b; font-size: 0.85rem; margin-bottom: 0.75rem; }
@@ -94,7 +96,7 @@
 </div>
 
 <!-- PAGE HERO -->
-<section class="page-hero freelance-hero">
+<section class="page-hero freelance-hero" style="background: linear-gradient(135deg, rgba(15,23,42,0.82) 0%, rgba(46,16,101,0.76) 100%), url('https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=1600&q=60') center/cover no-repeat;">
   <div class="container">
     <div class="page-hero-content">
       <nav class="breadcrumb">
@@ -122,24 +124,24 @@
     </div>
     <div class="role-cards">
       <div class="role-card reveal reveal-delay-1">
-        <div class="role-icon" style="background:rgba(124,58,237,0.1);">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <div class="role-img">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=70" alt="Mutual fund advisor" loading="lazy" />
         </div>
         <h3>Mutual Fund Advisor</h3>
         <p>Help clients invest in SIPs, ELSS, and lumpsum funds. Earn trail commission on AUM — the income keeps coming even when you're not working.</p>
         <span class="earn-tag">0.5% – 1.5% Trail Income</span>
       </div>
       <div class="role-card reveal reveal-delay-2">
-        <div class="role-icon" style="background:rgba(239,68,68,0.1);">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="role-img">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=70" alt="Insurance advisor" loading="lazy" />
         </div>
         <h3>Insurance Advisor</h3>
         <p>Advise clients on Health, Motor, Home, and Travel insurance. Earn upfront commissions on every policy sold plus renewal commissions.</p>
         <span class="earn-tag" style="background:rgba(239,68,68,0.1);color:#dc2626;">10% – 40% Commission</span>
       </div>
       <div class="role-card reveal reveal-delay-3">
-        <div class="role-icon" style="background:rgba(16,185,129,0.1);">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        <div class="role-img">
+          <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=600&q=70" alt="Life insurance advisor" loading="lazy" />
         </div>
         <h3>Life Insurance Advisor</h3>
         <p>Protect families with Term Plans, ULIPs, and Endowment policies. Life insurance earns the highest first-year commissions in the industry.</p>
@@ -159,29 +161,31 @@
         <p class="reveal">Most financial advisors struggle at the start — no brand support, no product knowledge, and no client trust. BNI Services solves all three. Our freelance program is designed to get you earning in weeks, not months.</p>
         <p class="reveal">You bring the relationships. We bring the products, compliance, training, and backend support. Together, we build your financial advisory practice.</p>
 
+        <img class="detail-banner reveal" src="https://images.unsplash.com/photo-1553484771-371a605b060b?auto=format&fit=crop&w=900&q=80" alt="Freelance financial advisor reviewing investment opportunities" loading="lazy" style="margin:1.25rem 0;" />
+
         <div class="perk-list" style="margin-top:1.5rem;">
           <div class="perk-item reveal">
-            <div class="perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 16 14"/></svg></div>
+            <div class="perk-icon"><img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=120&h=120&q=70" alt="Flexible hours" loading="lazy" /></div>
             <div><h4>Flexible Hours</h4><p>Work mornings, evenings, weekends — or full-time. Your schedule, your choice.</p></div>
           </div>
           <div class="perk-item reveal">
-            <div class="perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+            <div class="perk-icon"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=120&h=120&q=70" alt="Free training" loading="lazy" /></div>
             <div><h4>Free Training</h4><p>Get trained on products, sales, and compliance at no cost. We invest in your success.</p></div>
           </div>
           <div class="perk-item reveal">
-            <div class="perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div class="perk-icon"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=120&h=120&q=70" alt="Digital tools" loading="lazy" /></div>
             <div><h4>Digital Tools</h4><p>Access BNI's CRM and comparison platforms to serve clients professionally.</p></div>
           </div>
           <div class="perk-item reveal">
-            <div class="perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <div class="perk-icon"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=120&h=120&q=70" alt="Referral network" loading="lazy" /></div>
             <div><h4>Referral Network</h4><p>Tap into BNI's existing client base and get warm introductions to build your portfolio.</p></div>
           </div>
           <div class="perk-item reveal">
-            <div class="perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+            <div class="perk-icon"><img src="https://images.unsplash.com/photo-1553484771-371a605b060b?auto=format&fit=crop&w=120&h=120&q=70" alt="No investment needed" loading="lazy" /></div>
             <div><h4>No Investment Needed</h4><p>Zero upfront cost to join as a freelance advisor. Register free and start immediately.</p></div>
           </div>
           <div class="perk-item reveal">
-            <div class="perk-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="perk-icon"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=120&h=120&q=70" alt="Compliance handled" loading="lazy" /></div>
             <div><h4>Compliance Handled</h4><p>We handle regulatory paperwork — AMFI/IRDAI registration support at no charge.</p></div>
           </div>
         </div>
@@ -336,7 +340,7 @@
         <div class="stars">★★★★★</div>
         <p>"I was a teacher looking for additional income. Within 3 months of joining BNI as a freelance advisor, I was earning ₹18,000 extra per month from insurance alone."</p>
         <div class="t-author">
-          <div class="t-avatar">PR</div>
+          <div class="t-avatar"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100&q=70" alt="Priya Rathod" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
           <div><h5>Priya Rathod</h5><span>Teacher → Freelance Advisor, Vadodara</span></div>
         </div>
       </div>
@@ -344,7 +348,7 @@
         <div class="stars">★★★★★</div>
         <p>"The trail income from mutual funds is the best part. Even on months when I don't close new clients, I still get passive income from my existing AUM portfolio."</p>
         <div class="t-author">
-          <div class="t-avatar">MJ</div>
+          <div class="t-avatar"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&h=100&q=70" alt="Mihir Joshi" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
           <div><h5>Mihir Joshi</h5><span>Full-time Freelance Advisor, Anand</span></div>
         </div>
       </div>
@@ -352,7 +356,7 @@
         <div class="stars">★★★★★</div>
         <p>"BNI's training was excellent. Even though I had no finance background, I was confident enough to start advising clients within a week. The team is always available."</p>
         <div class="t-author">
-          <div class="t-avatar">SK</div>
+          <div class="t-avatar"><img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=100&h=100&q=70" alt="Shruti Kapadia" style="width:100%;height:100%;object-fit:cover;" loading="lazy" /></div>
           <div><h5>Shruti Kapadia</h5><span>Part-time Advisor, Bharuch</span></div>
         </div>
       </div>

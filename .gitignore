@@ -4,10 +4,14 @@ assets/shot_*.png
 assets/full_*.png
 assets/v2_*.png
 assets/ss_*.png
+assets/vis_*.png
+assets/new_*.png
+assets/chk_*.png
 
 # Temp HTML files used for screenshotting
 __audit_*.html
 __ss_*.html
+__v_*.html
 
 # OS files
 .DS_Store
