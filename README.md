@@ -1,6 +1,6 @@
 # BNI Services – Insurance & Investment Website
 
-A fully responsive, multi-page static website built for **BNI Insurance & Investment Services**, a financial advisory firm based in Vadodara, Gujarat. The site covers their complete service portfolio — Mutual Fund investments, Life Insurance, General Insurance, Franchise opportunities, and Freelance advisory roles — with a design focused on building client trust through clear communication and professional presentation.
+A student project: a responsive, multi-page static website for **BNI Insurance & Investment Services**, a financial advisory firm based in Vadodara, Gujarat. The site covers their services — Mutual Fund investments, Life Insurance, General Insurance, Franchise opportunities, and Freelance advisory roles.
 
 ![BNI Services Preview](assets/preview.png)
 
@@ -27,15 +27,15 @@ A fully responsive, multi-page static website built for **BNI Insurance & Invest
 
 - **Zero dependencies** — pure HTML5, CSS3, and vanilla JavaScript. No frameworks, no npm, no build tools.
 - **Responsive layout** — works on mobile, tablet, and widescreen. Hamburger menu collapses the full navbar on small screens.
-- **1500px max-width layout** — wide container optimised for modern displays without feeling stretched on ultra-wide screens.
-- **Real BNI logo** — official BNI Services logo used in the navbar and footer across every page.
+- **1500px max-width layout** — a wide centered container.
+- **BNI logo** — the BNI Services logo is used in the navbar and footer across every page.
 - **Page loader** — branded BNI loader with animated progress bar plays on every page entry.
 - **Scroll reveal animations** — sections, cards and elements animate in as the user scrolls using IntersectionObserver.
 - **Sticky navbar** — shrinks on scroll, always accessible. Active page link highlighted automatically.
-- **WhatsApp float** — persistent WhatsApp shortcut button on every page for instant client contact.
+- **WhatsApp float** — persistent WhatsApp shortcut button on every page for client contact.
 - **Sidebar forms** — each service page has a contextual lead capture form (quote / callback / apply) in the sidebar.
 - **Consistent design system** — CSS custom properties for colors, typography, spacing, shadows, gradients, and transitions. Change a variable once, updates everywhere.
-- **Purple brand theme** — complete purple color scheme (`#7c3aed`) matching the BNI Services brand identity.
+- **Purple theme** — purple color scheme (`#7c3aed`) matching the BNI Services brand.
 
 ---
 
@@ -52,7 +52,7 @@ bni-services/
 ├── freelance.html
 ├── contact.html
 ├── assets/
-│   ├── bni-logo.png        # Official BNI Services logo (navbar + footer)
+│   ├── bni-logo.png        # BNI Services logo (navbar + footer)
 │   └── preview.png         # README hero screenshot
 ├── css/
 │   └── style.css           # All styles — variables, layout, components, pages, utilities, responsive
@@ -77,8 +77,8 @@ bni-services/
 
 ### Typography
 
-- **Headings** — `Syne` (Google Fonts) — geometric, modern, high visual weight
-- **Body** — `Inter` (Google Fonts) — neutral, highly legible at all sizes
+- **Headings** — `Syne` (Google Fonts) — geometric
+- **Body** — `Inter` (Google Fonts) — neutral, readable
 
 ### Layout
 
